@@ -1,0 +1,94 @@
+/*------------------------------*\
+
+    #TYPOGRAPHY
+
+\*------------------------------*/
+
+@import 'https://fonts.googleapis.com/css?family=Dosis';
+
+
+body {
+	font: $font-base-size $font-txt;
+	line-height: $font-base-lh;
+	color: $c-txt;
+}
+
+
+// HEADINGS
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6  {
+	margin: 0;
+	font-weight: 400;	
+	@include font-smoothing();
+}
+
+h1,
+.h1{	
+	@include font-size($h1-font-sizes);	
+	font-family: $font-h;
+}
+
+h2,
+.h2{	
+	@include font-size($h2-font-sizes);	
+}
+
+h3,
+.h3{	
+	@include font-size($h3-font-sizes);	
+}
+
+h4,
+.h4{	
+	@include font-size($h4-font-sizes);	
+}
+
+h5,
+.h5{	
+	@include font-size($h5-font-sizes);	
+}
+
+h6,
+.h6{	
+	@include font-size($h6-font-sizes);	
+}
+
+
+// CONTENT
+
+p, .p {
+	@include font-size($p-font-sizes);	
+	@include font-smoothing();
+}
+
+p {
+	margin-bottom: 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+p a {
+}
+
+blockquote {
+
+}
+
+ul, ol{
+	
+}
+
+.ta--l {
+	text-align: left;
+}
+.ta--c {
+	text-align: center;
+}
+.ta--r {
+	text-align: right;
+}
+
+@include add-webfont('hellolucky', 'hellolucky', 'hellolucky-webfont');

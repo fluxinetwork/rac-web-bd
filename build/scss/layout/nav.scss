@@ -1,0 +1,150 @@
+/*------------------------------*\
+
+    #NAV
+
+\*------------------------------*/
+
+.nav {
+	@extend %transition;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	@include flex(center);
+	background-color: rgba(#FFF, 0.95);
+	box-shadow: 0 0 15px rgba(#000, 0.1);
+	padding: 0 $space--xs 0 $space--xs*1.5;
+
+	&.is-off {
+		top: -100px;
+	}
+}
+
+.logo-rac {
+	display: none;
+	max-height: 58px;
+	margin-right: $space--xs;
+}
+
+.nav__primary {
+	@extend %list-reset;
+	display: flex;
+}
+
+.nav-item {
+	@extend %transition;
+	position: relative;
+
+	&:hover {
+		background-color: $c-main;
+
+		.nav-item__lien {
+			color: #fff;
+		}
+	}
+
+	&.has-dropdown:hover {
+		.wrap-dropdown {
+			visibility: visible;
+		}
+		.nav-dropdown {
+			transform: translateY(0);
+		}
+	}
+}
+.nav-item__lien {
+	@extend %transition;
+	font-family: hellolucky, arial;
+	font-size: 24px;
+	letter-spacing: 2px;
+	color: $c-main;
+	display: block;
+	padding: $space--xs;
+}
+
+.wrap-dropdown {
+	position: absolute;
+	z-index: 100;
+	top: 80x;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	visibility: hidden;
+	
+}
+.nav-dropdown {
+	@extend %transition;
+	@extend %list-reset;
+	@include flex(null center, true);
+	background-color: $c-main;
+	transform: translateY(-100%);
+	border-radius: 0 0 6px 6px;
+}
+.nav-dropdown__item {
+	position: relative;
+	//border-top: 1px solid rgba(#fff, 0.3);
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+		width: 40px;
+		height: 6px;
+		background-color: rgba(#fff, 0.3);
+		border-radius: $radius;
+	} 
+}
+.nav-dropdown__item__lien {
+	@extend .nav-item__lien;
+	@extend %transition;
+	color: #fff;
+	font-size: 20px;
+
+	&:hover {
+		transform: scale(0.9);
+	}
+}
+
+.nav__share {
+	display: none;
+	margin-left: auto;
+
+	.button--round {
+		display: none;
+		margin-right: $space--xs;
+	}
+}
+
+
+@media screen and (min-width: $break--s) {
+	.nav {
+		justify-content: flex-start;
+		padding: 0 $space--s 0 $space--xs*1.5;
+	}
+	.nav-item__lien {
+		font-size: 30px;
+		padding: $space--s*0.8;
+	}
+	.nav-dropdown__item__lien {
+		font-size: 22px;
+	}
+	.logo-rac {
+		display: block;
+	}
+}
+
+@media screen and (min-width: $break--m) {
+	.nav__share {
+		display: flex;
+	}
+}
+
+@media screen and (min-width: $break--l) {
+	.nav__share .button--round {
+		display: flex;
+	}
+}
+

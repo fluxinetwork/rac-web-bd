@@ -1,0 +1,47 @@
+/*------------------------------*\
+
+    #PLANCHE
+
+\*------------------------------*/
+
+.wrap-planche {
+	position: relative;
+}
+
+.planche {
+	position: relative;
+	z-index: 2;
+	background-color: #fff;
+	overflow: hidden;
+	margin-top: $space--s;
+	border-radius: $radius;
+}
+.planche__img {
+	width: 100%;
+}
+
+.planche__share {
+	position: absolute;
+	bottom: $space--s;
+	right: -60px;
+	transform: translateX(-200%);
+	transition: all 0.4s $ease-out-back;
+
+	&.is-visible {
+		transform: translateX(0%);
+	}
+	
+	.button {
+		color: $c-main;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+	.icon-download4 {
+		position: relative;
+		left: 1px;
+		top: -1px;
+		font-size: 18px;
+	}
+}

@@ -1,0 +1,57 @@
+/*------------------------------*\
+
+    #FOOTER
+
+\*------------------------------*/
+
+.scroll-down {
+	@extend %button--scroll;
+ 	position: fixed;
+	left: 50%;
+	transform: translateX(-50%) rotate(180deg);
+	animation: 0.2s ease-in-out 3s forwards appear;
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+		bottom: -100px
+	}
+	1% {
+		opacity: 0;
+		bottom: $space--s;
+	}
+	100%{
+		opacity: 1;
+		bottom: $space--s;
+	}
+}
+
+.scroll-top {
+	@extend %button--scroll;
+ 	position: fixed;
+ 	right: $space--s;
+ 	bottom: $space--s;
+
+ 	&.is-off {
+ 		bottom: -100px;
+ 	}
+}
+
+.scroll-down,
+.scroll-top {
+	&.is-off {
+		bottom: -100px;
+	}
+}
+
+.load {
+	@include flex(center);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}

@@ -1,0 +1,110 @@
+// BREAKPOINTS
+
+$breakpoints: (
+	small: 440px,
+	medium: 590px, 
+	large: 690px,
+	xlarge: 900px,
+);
+
+$break--s: map-get($breakpoints, small);
+$break--m: map-get($breakpoints, medium);
+$break--l: map-get($breakpoints, large);
+$break--xl: map-get($breakpoints, xlarge);
+
+
+// SPACE
+
+$space-base: 10rem;
+$gutter: $space-base*0.4;
+$gutter--xs: $space-base*0.1;
+$gutter--s: $space-base*0.2;
+$gutter--l: $space-base*0.6;
+
+$space--xs: 0.5rem;
+$space--s: 1.5rem;
+$space--m: 3.5rem;
+$space--l: 8rem;
+
+
+// COLORS
+
+$c-main: green;
+$c-highlight: green;
+$c-hover: $c-highlight;
+$c-special: red;
+$c-dark: black;
+$c-txt: #fff;
+
+$c-bglight:#f8f8f8;
+
+$c-error: #b94a48;
+$c-valide: #86bd4c;
+
+$c-fb: #3b5998;
+$c-tw: #1da1f2;
+
+// STYLES
+
+$radius: 8px;
+$bshadow: 0 0 15px rgba(0,0,0,0.2);
+$bshadow--heavy: 0 0 30px rgba(0,0,0,0.3);
+
+
+// TRANSITIONS
+
+$transition: all 0.2s ease-in-out;
+$transition--dynamic: all 0.4s $ease-out-quart;
+
+// TYPO
+
+$font-h: hellolucky, cursive;
+$font-txt: 'Dosis', arial;
+$font-bt: hellolucky, cursive;
+
+$font-base-size: 16px;
+$font-base-lh: 1.4;
+
+$h1-font-sizes: (
+	null : (rem(40px), 1),
+	small : (rem(43px)),
+	medium : (rem(46px)),
+	large : (rem(50px))
+);
+
+$h2-font-sizes: (
+	null : (rem(21px), 1.2),
+	small : (rem(24px), 1.25),
+	medium : (rem(27px), 1.3),
+	large : (rem(31px), 1.3)
+);
+
+$h3-font-sizes: (
+	null : (rem(18px)),
+	small : (rem(20px)),
+	medium : (rem(22px)),
+	large : (rem(23px))
+);
+
+$h4-font-sizes: (
+	null : (1.6rem)
+);
+
+$h5-font-sizes: (
+	null : (1.4rem)
+);
+
+$h6-font-sizes: (
+	null : (1.2rem)
+);
+
+$p-font-sizes: (
+	null : (rem(16px)),
+	small : (rem(18px)),
+	medium : (rem(20px)),
+);
+
+
+
+
+
