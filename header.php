@@ -1,8 +1,8 @@
 <!doctype html>
 <html class="no-js">
-	
+
 <head>
-	
+
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -19,15 +19,15 @@
 	endif;
 	?>
 	</title>
-	
+
 	<?php wp_head(); ?>
-	
+
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/app/js/vendors/respond.min.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/app/js/vendors/selectivizr-min.js"></script>
 	<![endif]-->
-	
+
 </head>
 
 <?php include(TEMPLATEPATH.'/app/inc/bodyclass.php'); ?>
@@ -36,7 +36,7 @@
 	<div class="wrap-main">
 
 		<nav class="nav">
-			<a href="http://rac-f.org/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/app/img/logo-rac.jpg" class="logo-rac"></a>
+			<a href="https://reseauactionclimat.org" target="_blank"><img src="<?php bloginfo('template_url'); ?>/app/img/logo-rac.jpg" class="logo-rac"></a>
 			<ul class="nav__primary">
 				<li class="nav-item has-dropdown">
 					<a href="" class="nav-item__lien">Lire la BD</a>
@@ -55,7 +55,3 @@
 				<a href="<?php bloginfo('tempalte_url'); ?>/app/img/planetman-web-bd.zip" target="_blank" class="button">Télécharger</a>
 			</div>
 		</nav>
-		
-		
-	
-
